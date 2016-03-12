@@ -1,0 +1,31 @@
+{
+  "name": "intilery-react-native",
+  "version": "0.0.1",
+  "description": "Intilery React Native SDK",
+  "main": "src/intilery.js",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Intilery/intilery-react-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Intilery/intilery-react-native/issues"
+  },
+  "engines": {
+    "node": ">=5"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test jest",
+    "flow": "flow",
+    "lint": "eslint src/**"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.0-beta.5",
+    "babel-jest": "^9.0.3",
+    "babel-plugin-transform-flow-strip-types": "^6.7.0",
+    "babel-polyfill": "^6.7.2",
+    "eslint": "2.2.0",
+    "flow-bin": "^0.22.1",
+    "jest-cli": "^0.9.2"
+  }
+}
