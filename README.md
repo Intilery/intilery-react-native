@@ -3,9 +3,9 @@
 Intilery React Native is an SDK for you to use to integrate your [React Native](https://facebook.github.io/react-native/) mobile applications into Intilery.
 
 - [Getting Started](#getting-started)
-- [Getting Help](#getting help)
 - [Documentation](#documentation)
 - [Upgrading](#upgrading)
+- [Getting Help](#getting help)
 - [Opening Issues](#opening-issues)
 - [Contributing](#contributing)
 - [License](#license)
@@ -20,17 +20,78 @@ npm install --save react-native-device-info
 npm install --save intilery-react-native
 ```
 
-## Getting Help
-
-Please contact your account manager.
+In the root of your application add the following lines of code:
+```JavaScript
+var Intilery = require('intilery-react-native');
+Intilery.setup('<name of app>', '<auth token>');
+```
 
 ## Documentation
 
-See the [Intilery Documentation](https://docs.intilery-analytics.com).
+See the [Intilery Documentation](http://docs.intilery-analytics.com) for full details.
+
+On each screen that requires using the Intilery tag, include the Intilery tag:
+```JavaScript
+var Intilery = require('intilery-react-native');
+```
+
+### Register for Push Notifications
+
+To associate the visitor with a token to use with push notifications (e.g GCM token) you first of all need to generate a token.
+Example instructions on how to do this can be found here:
+- [iOS](https://facebook.github.io/react-native/docs/pushnotificationios.html)
+- [Android](https://www.npmjs.com/package/react-native-push-notification)
+  You don't have to use these methods however, it doesn't matter how you generate the token.
+
+Once you have the token call
+```JavaScript
+Intilery.registerForPushNotifications(token)
+```
+
+
+### Tracking Events
+```JavaScript
+Intilery.trackEvent(<event action>, <event data>, <event name>).done();
+```
+
+Where `event data` is a map containing `key : value` pairs where each `key` is a `entity.property`.
+
+e.g.
+```JavaScript
+Intilery.trackEvent('select movie', {'Movie.Title':movie.title});
+```
+
+### Set Visitor Properties
+```JavaScript
+Intilery.setVisitorProperties(<visitor data>).done();
+```
+
+Where `visitor data` is a map containing `key : value` pairs where each `key` is a visitor or customer `property`.
+
+e.g.
+```JavaScript
+Intilery.setVisitorProperties({'Last Movie':movie.title}).done();
+```
+
+### Get Visitor Properties
+```JavaScript
+Intilery.getVisitorProperties(<property list>, callback).done();
+```
+
+Where `property list` is a list of visitor properties.
+
+e.g.
+```JavaScript
+Intilery.getVisitorProperties(['Last Movie'], this.setLastMovie).done();
+```
 
 ## Upgrading
 
 TODO: use npm
+
+## Getting Help
+
+Please contact your account manager.
 
 ## Opening Issues
 
