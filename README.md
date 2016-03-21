@@ -44,7 +44,7 @@ For more information about contributing PRs and issues, see our [Contribution Gu
 
 ## License
 
-Intilery React Native is [BSD licensed](./LICENSE).
+Intilery React Native is [ISC](./LICENSE).
 
 
 [rndi]:https://github.com/rebeccahughes/react-native-device-info
