@@ -99,7 +99,6 @@ let getVisitorProperties = async function(properties: Array<string>, callbackFn:
   let baseURL = 'https://' + config.domain + '/api/visitor/' + visitorID + '/properties';
   let apiCall = baseURL + '?properties=' + properties.join();
 
-  console.log('Getting properties: ' + apiCall);
   fetch(apiCall, {
     method: 'GET',
     headers: {

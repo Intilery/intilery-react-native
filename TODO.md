@@ -2,8 +2,8 @@
 * ~jest~
 * ~basic code~
 * ~npm link~
-* IFV
-* Configuration using AsynStorage
+* ~IFV~
+* ~Configuration using AsynStorage~
 * GitHub and Issues
 * Travis CI
 * Circle CI
