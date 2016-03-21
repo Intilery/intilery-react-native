@@ -2,7 +2,7 @@
   "name": "intilery-react-native",
   "version": "0.0.1",
   "description": "Intilery React Native SDK",
-  "main": "src/intilery.js",
+  "main": "Intilery.js",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -27,5 +27,9 @@
     "eslint": "2.2.0",
     "flow-bin": "^0.22.1",
     "jest-cli": "^0.9.2"
+  },
+  "peerDependencies": {
+    "react-native": "^0.21.0",
+    "react-native-device-info": "^0.8.4"
   }
 }

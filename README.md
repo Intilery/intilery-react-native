@@ -13,8 +13,10 @@ Intilery React Native is an SDK for you to use to integrate your [React Native](
 ## Introduction
 
 ## Getting Started
+The Intilery React Native module depends on [react-native-device-info][rndi].
 
 ```
+npm install --save react-native-device-info
 npm install --save intilery-react-native
 ```
 
@@ -43,3 +45,6 @@ For more information about contributing PRs and issues, see our [Contribution Gu
 ## License
 
 Intilery React Native is [BSD licensed](./LICENSE).
+
+
+[rndi]:https://github.com/rebeccahughes/react-native-device-info
