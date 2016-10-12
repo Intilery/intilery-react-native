@@ -26,9 +26,7 @@ var Intilery = require('intilery-react-native');
 Intilery.setup('<name of app>', '<auth token>');
 ```
 
-## Documentation
-
-See the [Intilery Documentation](http://docs.intilery-analytics.com) for full details.
+## Integration
 
 On each screen that requires using the Intilery tag, include the Intilery tag:
 ```JavaScript
